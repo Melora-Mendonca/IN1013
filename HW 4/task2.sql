@@ -50,12 +50,5 @@ SET death = "2020-09-01"
 WHERE petname = "Puffball";
 
 -- Task 6:
-ALTER TABLE petEvent
-DROP FOREIGN KEY petevent_ibfk_1;
-
-ALTER TABLE petEvent
-ADD CONSTRAINT petevent_ibfk_1
-FOREIGN KEY (petname) REFERENCES petPet(petname) ON DELETE CASCADE;
-
 DELETE FROM petPet
 WHERE owner = "Harold" AND species = "dog";
